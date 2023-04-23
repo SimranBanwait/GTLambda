@@ -8,7 +8,7 @@ phases:
   build:
     commands:
     - echo "Yo... This is the build phase, Here the lambda functions .py file is getting zipped"
-    -zip -r deployment_package.zip "lambda_function2.py"
+    -zip -r "deployment_package.zip "lambda_function2.py"
 
   post_build:
     commands:
