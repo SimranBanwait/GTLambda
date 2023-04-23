@@ -1,15 +1,15 @@
 version: 0.1
 
 phases:
-  install:
-    commands:
-      - echo "Nothing to install"
-  pre_build:
-    commands:
-      - echo Nothing to do in the pre_build phase...
+  # install:
+  #   commands:
+  #     - echo "Nothing to install"
+  # pre_build:
+  #   commands:
+  #     - echo Nothing to do in the pre_build phase...
   build:
     commands:
-      - echo "Yo... This is the build phase, Here the lambda functions .py file is getting zipped"
+      - echo "Yo.... This is the build phase, Here the lambda functions .py file is getting zipped"
       - zip -r deployment_package.zip lambda_function.py
   post_build:
     commands:
