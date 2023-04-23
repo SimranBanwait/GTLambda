@@ -15,7 +15,8 @@ phases:
     commands:
       - echo "Deploying this zipped file to the lambda function"
       - aws lambda update-function-code --function-name GTLambda --zip-file fileb://deployment_package.zip
-  artifacts:
+
+artifacts:
     type: zip
     paths: 
       - '*' 
