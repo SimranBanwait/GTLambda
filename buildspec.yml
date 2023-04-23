@@ -2,16 +2,20 @@ version: 0.1
 
 phases:
   build:
+    install:
+      runtime-versions:
+        java: corretto11
+    pre_build:
+      commands:
+        - echo Nothing to do in the pre_build phase...
     commands:
     - echo "Yo... This is the build phase, Here the lambda functions .py file is getting zipped"
     - zip -r "deployment_package.zip "lambda_function2.py"
-
-  post_build:
+    post_build:
     commands:
     - echo "Deploying this zipped file to the lambda function"
     - aws lambda update-function-code --function-name GTLambda --zip-file fileb://deployment_package.zip
-
-  artifacts:
-    type: zip
-    paths: 
-      - '*' 
+    artifacts:
+      type: zip
+      paths: 
+        - '*' 
