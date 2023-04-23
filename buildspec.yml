@@ -3,8 +3,8 @@ version: 0.1
 phases:
   build:
     install:
-      runtime-versions:
-        java: corretto11
+      commands:
+      - echo "Nothing to install"
     pre_build:
       commands:
         - echo Nothing to do in the pre_build phase...
