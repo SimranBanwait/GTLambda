@@ -1,10 +1,6 @@
 version: 0.1
 
 phases:
-  install:
-
-  pre-build:
-
   build:
     commands:
     - echo "Yo... This is the build phase, Here the lambda functions .py file is getting zipped"
